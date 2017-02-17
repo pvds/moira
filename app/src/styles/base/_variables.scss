@@ -1,0 +1,74 @@
+// Images
+$image-path: "../images";
+
+// Fonts
+$font-path: "../fonts";
+$font-base: "Museo Sans", "sans-serif";
+$font-heading: "Museo Sans", "sans-serif";
+$font-code: "monospace", "monospace";
+
+$font-size-h1: 3.2rem;
+$font-size-h2: 2.8rem;
+$font-size-h3: 2.4rem;
+$font-size-h4: 2rem;
+
+// Typography
+$line-height: 1.15;
+
+// Colors
+$black: #111111;
+$white: #ffffff;
+$light-grey: #cccccc;
+$medium-grey: #777777;
+$dark-grey: #333333;
+$blue: blue;
+$red: red;
+$green: green;
+$purple: purple;
+$pink: pink;
+$yellow: yellow;
+$gold: gold;
+$orange: orange;
+
+// Layout
+$padding: 10px;
+
+// Grid
+$gutter: 20px;
+
+//bourbon neat
+$neat-grid: (
+    columns: 12,
+    gutter: $gutter,
+);
+
+//media is optional > use own grid system for more flexibility
+$neat-grid-custom: (
+    columns: 6,
+    gutter: $gutter * 2
+);
+
+$neat-grid-custom-media-example: (
+    columns: 6,
+    gutter: $gutter * 2,
+    media: 28em
+);
+
+$neat-grid-custom-media-map-get-example: (
+    columns: 6,
+    gutter: $gutter * 2,
+    media: map_get($breakpoints, xs)
+);
+
+// CSS3
+
+// Transitions
+$transition-duration-short: 0.2s;
+$transition-duration-medium: 0.3s;
+$transition-duration-long: 0.6s;
+$transition-delay: 0.1s;
+
+// Borders
+$border-radius: 8px;
+$border-radius-half: $border-radius / 2;
+$border-radius-fourth: $border-radius / 4;

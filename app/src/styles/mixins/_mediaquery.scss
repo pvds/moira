@@ -1,0 +1,29 @@
+@mixin media($name, $push: false) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $name) {
+        // Prints a media query based on the value
+        @media #{map-get($breakpoints, $name)} {
+            @content;
+        }
+    }
+
+        // If the key doesn't exist in the map
+        // But $push is defined
+    @else if $push != false {
+        // Add the new breakpoint to the map
+        $breakpoints: map-merge($breakpoints, ($name: $push)) !global;
+        // And re-call the mixin normally
+        @include media($name) {
+            @content;
+        }
+    }
+
+        // If the key doesn't exist in the map
+        // And there is no push
+    @else {
+        // Just warn the user
+        @warn "Unfortunately, no value could be retrieved from `#{$name}`. "
+        + "Please make sure it is defined in `$breakpoints` map. "
+        + "Or pass the media query as a second parameter to add it to the map.";
+    }
+}

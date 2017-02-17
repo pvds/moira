@@ -1,0 +1,279 @@
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Set html default font-size to 10px (1rem will be 10pixels).
+ * 2. Change the default font family in all browsers.
+ * 3. Correct the line height in all browsers.
+ * 4. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ * 5. Set box model to border box
+ */
+
+html {
+    font-size: 62.5%; /* 1 */
+    font-family: $font-base; /* 2 */
+    line-height: $line-height; /* 3 */
+    -ms-text-size-adjust: 100%; /* 4 */
+    -webkit-text-size-adjust: 100%; /* 4 */
+    box-sizing: border-box; /* 4 */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit; /* 4 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * 1. Remove the margin in all browsers.
+ * 2. Set default font-size to 16px / 1.6rem
+ * 3. Better font rendering for dark text on light background !use if needed
+ */
+
+body {
+    margin: 0; /* 1 */
+    @include rem(font-size, 1.6rem); /* 2 */
+    //@include font-smoothing(on) /* 3 */
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+    display: block;
+}
+
+/* Resets
+   ========================================================================== */
+
+/*
+ * Reset margin and padding from core elements
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+blockquote,
+figure,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+main,
+li {
+    display: block;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+strong {
+    font-weight: bold;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Set project font-size for headers
+ */
+
+h1{
+    @include rem(font-size, $font-size-h1);
+}
+
+h2{
+    @include rem(font-size, $font-size-h2);
+}
+
+h3{
+    @include rem(font-size, $font-size-h3);
+}
+
+h4{
+    @include rem(font-size, $font-size-h4);
+}
+
+/**
+ * Inherit default font-size
+ */
+
+h5,
+h6,
+p {
+    font-size: inherit;
+}
+
+/**
+ * 1. Inherit text-color in all browsers
+ * 2. Always show pointer cursor
+ * 3. Set default transition
+ */
+
+a,
+button {
+    color: inherit; /* 1 */
+    cursor: pointer; /* 2 */
+    transition: .3s; /* 3 */
+}
+
+/**
+ * 1. Do not show default underline for links
+ * 2. Always show pointer cursor
+ * 3. Remove the gray background on active links in IE 10.
+ * 4. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+    text-decoration: none; /* 1 */
+    outline-width: 0; /* 2 */
+    background-color: transparent; /* 3 */
+    -webkit-text-decoration-skip: objects; /* 4 */
+}
+
+/**
+ * 1. Reset the native appearance in all browsers
+ * 2. Make IE behave
+ */
+
+button {
+    border: 0; /* 1 */
+    font: inherit; /* 1 */
+    -webkit-font-smoothing: inherit; /* 1 */
+    letter-spacing: inherit; /* 1 */
+    background: none; /* 1 */
+    overflow: visible; /* 2 */
+}
+
+/*
+ * Undoes a bummer pseudo-element Firefox adds inside buttons that causes them to display larger than expected
+ */
+::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Inherit default font-size
+ */
+
+code,
+kbd,
+samp {
+    font-family: $font-code; /* 1 */
+    font-size: inherit; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+    font-size: 80%;
+}
+
+/* Forms - To be completed - see normalize and setup own version
+   ========================================================================== */
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+textarea {
+    overflow: auto;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+video {
+    display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * 1. Fixes images within links gaining a border in IE 8, 9 and 10.
+ * 2. Makes sure images respect the bounds of a fluid container.
+ */
+
+img {
+    border: 0; /* 1 */
+    max-width: 100%; /* 2 */
+    height: auto; /* 2 */
+    vertical-align: middle; /* 2 */
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* Hidden
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10-.
+ */
+
+[hidden] {
+    display: none;
+}
+

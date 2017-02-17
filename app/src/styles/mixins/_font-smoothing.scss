@@ -1,0 +1,12 @@
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        /* font-smoothing for dark text on light background */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        /* font-smoothing for light text on dark background */
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}

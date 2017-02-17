@@ -1,0 +1,32 @@
+body{
+    &.is-development{
+        &:after{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            background: $black;
+            color: $white;
+            padding: 0.5rem 1rem;
+            font-size: 1.3rem;
+            font-family: $font-base;
+            border-radius: $border-radius 0 0 0;
+            z-index: 10000;
+            content: "XXS - 20em(320px)";
+            @include media(xs-only){
+                content: "XS - 28em(448px)";
+            }
+            @include media(sm){
+                content: "SM - 36em(576px)";
+            }
+            @include media(md){
+                content: "MD - 48em(768px)";
+            }
+            @include media(lg){
+                content: "LG - 64em(1024px)";
+            }
+            @include media(xl){
+                content: "XL - 80em(1280px)";
+            }
+        }
+    }
+}
