@@ -11,22 +11,50 @@ body{
             font-family: $font-base;
             border-radius: $border-radius 0 0 0;
             z-index: 10000;
-            content: "XXS - 20em(320px)";
+            content: "XXS - #{$bp-xxs}em(#{$bp-xxs-px}px)";
             @include media(xs-only){
-                content: "XS - 28em(448px)";
+                content: "XS - #{$bp-xs}em(#{$bp-xs-px}px)";
             }
             @include media(sm){
-                content: "SM - 36em(576px)";
+                content: "SM - #{$bp-sm}em(#{$bp-sm-px}px)";
             }
             @include media(md){
-                content: "MD - 48em(768px)";
+                content: "MD - #{$bp-md}em(#{$bp-md-px}px)";
             }
             @include media(lg){
-                content: "LG - 64em(1024px)";
+                content: "LG - #{$bp-lg}em(#{$bp-lg-px}px)";
             }
             @include media(xl){
-                content: "XL - 80em(1280px)";
+                content: "XL - #{$bp-xl}em(#{$bp-xl-px}px)";
             }
+        }
+    }
+}
+
+header{
+    section{
+        &.top{
+            background: darken($white, 70);
+            color: darken($white, 20);
+            text-align: right;
+
+            li{
+                > *{
+                    padding: $gutter-fourth $gutter-half;
+                    margin: 2px 0 4px 0;
+                    display: inline-block;
+                }
+            }
+
+            a{
+                &:hover{
+                    color: $white;
+                }
+            }
+        }
+        #menu-dev{
+            font-size: 1.2rem;
+            margin: 0 $gutter;
         }
     }
 }

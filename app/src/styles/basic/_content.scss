@@ -1,0 +1,34 @@
+.is-content{
+    line-height: $line-height;
+    text-align: left;
+    h1,h2,h3,h4,h5,h6{
+        margin: ($spacing+$spacing-half) 0 0 0;
+    }
+    a{
+        font-weight: 700;
+        color: darken($blue,5);
+        &:hover{
+            color: darken($blue,15);
+        }
+    }
+    p{
+        margin: $spacing 0;
+    }
+    ol,ul{
+        margin: $spacing 0 $spacing ($spacing-double+$spacing);
+    }
+    li{
+        display: list-item;
+    }
+    blockquote {
+        margin: $spacing 0 $spacing $spacing-double;
+        padding: $gutter-half;
+        border-left: 6px solid $green;
+    }
+    > :first-child{
+        margin-top: 0;
+    }
+    > :last-child{
+        margin-bottom: 0;
+    }
+}

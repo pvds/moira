@@ -1,0 +1,60 @@
+form{
+    &.is-rounded{
+        input,
+        textarea,
+        select,
+        .file-input + label,
+        .alert{
+            border-radius: $border-radius-half;
+        }
+        .prepend{
+            border-radius: $border-radius-half 0 0 $border-radius-half;
+        }
+        .append{
+            border-radius: 0 $border-radius-half $border-radius-half 0;
+        }
+    }
+}
+
+html.js{
+    .has-inline-label{
+        input{
+            height: 4.2rem;
+            padding: 1.4rem 1rem 0.2rem 1rem;
+        }
+        .label-wrapper{
+            position: absolute;
+            top: 5px;
+            color: $black;
+            transform: translate3d(0, 0, 0);
+            transition: all 0.2s ease-in-out;
+            label{
+                padding-left: 11px;
+                line-height: 1;
+                font-size: 1.4rem;
+            }
+        }
+        position: relative;
+        &.has-autocomplete, &.has-focus, &[data-empty="false"]{
+            .label-wrapper{
+                color: $black;
+                transform: translate3d(0, -10px, 0);
+                label{
+                    font-weight: $font-weight-base-strong;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    //TODO: a/b test whether required asterisk is the best ux choice, use js to add 'is-required' class to form-control
+    //.is-required{
+    //    .label-wrapper{
+    //        label,.is-label{
+    //            &:before{
+    //                margin-left: 2px;
+    //                content: "*";
+    //            }
+    //        }
+    //    }
+    //}
+}

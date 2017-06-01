@@ -1,0 +1,26 @@
+.alert{
+    background: darken($white, 10);
+    color: $grey;
+    padding: $gutter-half;
+    font-size: 1.4rem;
+    &.is-success{
+        background-color: lighten($green, 40);
+        color: $green-dark;
+    }
+    &.is-info{
+        background-color: lighten($blue, 40);
+        color: darken($blue, 10);
+    }
+    &.is-warning{
+        background-color: lighten($orange, 42);
+        color: $orange;
+    }
+    &.is-error{
+        background-color: lighten($red, 36);
+        color: $red;
+    }
+
+    &.is-centered{
+        text-align: center;
+    }
+}

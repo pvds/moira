@@ -1,0 +1,24 @@
+.expander {
+    .expander-trigger {
+        position: relative;
+        display: block;
+        user-select: none;
+        cursor: pointer;
+
+        &:before {
+            @include fa;
+            content: "\f068";
+            margin-right: 0.5em;
+        }
+    }
+
+    .expander-hidden {
+        &:before {
+            content: "\f067";
+        }
+    }
+
+    .expander-hidden + .expander-content {
+        display: none;
+    }
+}

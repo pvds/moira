@@ -13,7 +13,7 @@
 html {
     font-size: 62.5%; /* 1 */
     font-family: $font-base; /* 2 */
-    line-height: $line-height; /* 3 */
+    line-height: $line-height-base; /* 3 */
     -ms-text-size-adjust: 100%; /* 4 */
     -webkit-text-size-adjust: 100%; /* 4 */
     box-sizing: border-box; /* 4 */
@@ -34,8 +34,11 @@ html {
 
 body {
     margin: 0; /* 1 */
-    @include rem(font-size, 1.6rem); /* 2 */
-    //@include font-smoothing(on) /* 3 */
+    @include rem(font-size, $font-size-base); /* 2 */
+    @include font-smoothing(on); /* 3 */
+    font-weight: $font-weight-base;
+    color: $black;
+    min-width: #{$bp-xxs-px - $gutter};
 }
 
 /**
@@ -88,39 +91,19 @@ li {
  */
 
 strong {
-    font-weight: bold;
+    font-weight: $font-weight-base-strong;
 }
 
 /* Text-level semantics
    ========================================================================== */
 
 /**
- * Set project font-size for headers
+ * Set project typography for headers
  */
 
-h1{
-    @include rem(font-size, $font-size-h1);
-}
-
-h2{
-    @include rem(font-size, $font-size-h2);
-}
-
-h3{
-    @include rem(font-size, $font-size-h3);
-}
-
-h4{
-    @include rem(font-size, $font-size-h4);
-}
-
-/**
- * Inherit default font-size
- */
-
-h5,
-h6,
-p {
+h1,h2,h3,h4,h5,h6{
+    font-family: $font-theme;
+    font-weight: $font-weight-theme-strong;
     font-size: inherit;
 }
 
@@ -194,6 +177,12 @@ sup {
     top: -0.5em;
 }
 
+hr{
+    border: 0;
+    border-top: .1rem solid darken($white, 5);
+    margin: 3.0rem 0;
+}
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Inherit default font-size
@@ -223,6 +212,10 @@ small {
 
 textarea {
     overflow: auto;
+}
+
+label{
+    cursor: pointer;
 }
 
 /* Embedded content
@@ -264,6 +257,16 @@ img {
 
 svg:not(:root) {
     overflow: hidden;
+}
+
+/* Old elements reset user agent styling
+   ========================================================================== */
+i{
+    font-style: normal;
+}
+
+b{
+    font-weight: $font-weight-base;
 }
 
 /* Hidden

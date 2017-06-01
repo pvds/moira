@@ -1,0 +1,15 @@
+.is-menu{
+    @include clearfix();
+    &.is-horizontal{
+        li{
+            float: left;
+        }
+    }
+    &.is-inline{
+        li{
+            display: inline-block;
+        }
+    }
+}
+
+

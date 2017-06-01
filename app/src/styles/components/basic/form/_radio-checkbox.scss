@@ -1,0 +1,101 @@
+/*Checkboxes and radio buttons*/
+
+//accessible but hidden
+input[type='checkbox'],
+input[type='radio'] {
+    @extend %hide-visual;
+}
+
+.choice-label{
+    font-size: 1.4rem;
+}
+
+//the default style
+[type="checkbox"],[type="radio"]{
+    + .fa{
+        margin-right: 0.5rem;
+    }
+}
+
+//the checked style using the :checked pseudo class
+[type="checkbox"]:hover,[type="radio"]:hover{
+    + .fa{
+        &:before{
+            color: darken($blue,5);
+        }
+    }
+}
+
+//the checked style using the :checked pseudo class
+[type="checkbox"]:checked,[type="radio"]:checked{
+    + .fa{
+        &:before{
+            color: $black;
+        }
+    }
+    ~ .choice-label{
+        color: $black;
+    }
+}
+
+//the focus style using the :focus pseudo class
+[type="checkbox"]:focus,[type="radio"]:focus{
+    + .fa{
+        &:before{
+        }
+    }
+}
+
+/*Checkboxes specific*/
+
+//the default style
+[type="checkbox"]{
+    + .fa{
+        font-weight: $font-weight-base-strong;
+    }
+}
+
+//the checked style using the :checked pseudo class
+[type="checkbox"]:checked{
+    + .fa{
+        margin-right: 0.4rem;
+        &:before{
+            //content: '\f0c8'; //square
+            content: '\f14a'; // square with check
+        }
+    }
+}
+
+//the focus style using the :focus pseudo class
+[type="checkbox"]:focus{
+    + .fa{
+        &:before{
+
+        }
+    }
+}
+
+/*Radiobutton specific*/
+
+//the default style
+[type="radio"]{
+    + .fa{
+    }
+}
+
+//the checked style using the :checked pseudo class
+[type="radio"]:checked{
+    + .fa{
+        &:before{
+            content: '\f111';
+        }
+    }
+}
+
+//the focus style using the :focus pseudo class
+[type="radio"]:focus{
+    + .fa{
+        &:before{
+        }
+    }
+}

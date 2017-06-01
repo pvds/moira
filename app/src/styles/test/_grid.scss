@@ -34,7 +34,7 @@
      * Use own media mixin and set custom grid on grid-column
      */
     @include media(xs){
-        @include grid-column(3, $neat-grid-custom);
+        @include grid-column(3, $neat-grid-extra-gutter);
     }
 }
 

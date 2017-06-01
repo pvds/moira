@@ -1,0 +1,47 @@
+form{
+    .has-success,.has-error{
+        .description-wrapper{
+            display: none;
+        }
+        .message-wrapper{
+            padding-left: 2rem;
+            &:before{
+                @include fa;
+                position: absolute;
+                margin-left: -2rem;
+            }
+        }
+    }
+
+    .has-success{
+        input:not([type=submit]):not([type=reset]),
+        input[type=file] + label,
+        textarea,
+        select {
+            border-color: $green-dark;
+        }
+        .message-wrapper{
+            padding-top: 0;
+        }
+    }
+    .has-error{
+        .element-wrapper{
+            label{
+                border-color: $red;
+                color: $black;
+                .fa{
+                    color: $red;
+                }
+            }
+        }
+        input:not([type=submit]):not([type=reset]), textarea, select{
+            border-color: $red;
+        }
+        .message-wrapper{
+            color: $red;
+            &:before{
+                content: "\f071";
+            }
+        }
+    }
+}

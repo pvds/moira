@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Museo Sans';
+    font-family: $font-family;
     @include fontdef("500");
     font-weight: 500;
     font-style: normal;

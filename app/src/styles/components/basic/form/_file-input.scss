@@ -1,0 +1,38 @@
+.js .file-input {
+    @extend %hide-visual;
+}
+
+.element-wrapper{
+    .file-input + label {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        cursor: pointer;
+        overflow: hidden;
+        background-color: $white;
+        border: 1px solid darken($white,20);
+        padding: 0.6rem 1.3rem;
+        height: 3.8rem;
+        line-height: 2.4rem;
+    }
+}
+
+.file-input + label * {
+    /* pointer-events: none; */
+    /* in case of FastClick lib use */
+}
+
+.no-js .file-input + label {
+    display: none;
+}
+
+.file-input + label:hover{
+}
+
+.file-input:focus + label,
+.file-input.has-focus + label{
+    //outline: 1px dotted #000;
+    //outline: -webkit-focus-ring-color auto 5px;
+    color: darken($blue, 10);
+}
+
+

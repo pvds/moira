@@ -1,18 +1,32 @@
+//Basic units
 $bp-unit: em;
-$bp-unit-to-pixel-ratio: 0.0625;
+$bp-pixel-base: 16;
+$bp-unit-to-pixel-ratio: 1 / $bp-pixel-base;
 
+//Break points for min-width
 $bp-xxs: 20;
 $bp-xs: 28;
 $bp-sm: 36;
 $bp-md: 48;
 $bp-lg: 64;
 $bp-xl: 80;
+
+//Break points for min-width in pixels
+$bp-xxs-px: $bp-xxs * $bp-pixel-base;
+$bp-xs-px: $bp-xs * $bp-pixel-base;
+$bp-sm-px: $bp-sm * $bp-pixel-base;
+$bp-md-px: $bp-md * $bp-pixel-base;
+$bp-lg-px: $bp-lg * $bp-pixel-base;
+$bp-xl-px: $bp-xl * $bp-pixel-base;
+
+//Break points for max-width
 $bp-xxs-max: $bp-xs - $bp-unit-to-pixel-ratio;
 $bp-xs-max: $bp-sm - $bp-unit-to-pixel-ratio;
 $bp-sm-max: $bp-md - $bp-unit-to-pixel-ratio;
 $bp-md-max: $bp-lg - $bp-unit-to-pixel-ratio;
 $bp-lg-max: $bp-xl - $bp-unit-to-pixel-ratio;
 
+//Media query arguments
 $bp-from: 'min-width:';
 $bp-to: 'max-width:';
 
@@ -33,6 +47,12 @@ $breakpoints: (
     'sm-only' : ('screen and (#{$bp-from} #{$bp-sm}#{$bp-unit}) and (#{$bp-to} #{$bp-sm-max}#{$bp-unit})'),
     'md-only' : ('screen and (#{$bp-from} #{$bp-md}#{$bp-unit}) and (#{$bp-to} #{$bp-md-max}#{$bp-unit})'),
     'lg-only' : ('screen and (#{$bp-from} #{$bp-lg}#{$bp-unit}) and (#{$bp-to} #{$bp-lg-max}#{$bp-unit})'),
+    'not-xxs' : ('screen and (#{$bp-from} #{$bp-xs}#{$bp-unit})'),
+    'not-xs' : ('screen and (#{$bp-to} #{$bp-xxs-max}#{$bp-unit}), (#{$bp-from} #{$bp-sm}#{$bp-unit})'),
+    'not-sm' : ('screen and (#{$bp-to} #{$bp-xs-max}#{$bp-unit}), (#{$bp-from} #{$bp-md}#{$bp-unit})'),
+    'not-md' : ('screen and (#{$bp-to} #{$bp-sm-max}#{$bp-unit}), (#{$bp-from} #{$bp-lg}#{$bp-unit})'),
+    'not-lg' : ('screen and (#{$bp-to} #{$bp-md-max}#{$bp-unit}), (#{$bp-from} #{$bp-xl}#{$bp-unit})'),
+    'not-xl' : ('screen and (#{$bp-to} #{$bp-lg-max}#{$bp-unit})'),
     'mobile' : ('screen and (#{$bp-to} #{$bp-sm-max}#{$bp-unit})'),
-    'desktop' : ('screen and (#{$bp-from} #{$bp-sm}#{$bp-unit})'),
+    'desktop' : ('screen and (#{$bp-from} #{$bp-md}#{$bp-unit})'),
 );

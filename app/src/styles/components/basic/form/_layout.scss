@@ -1,0 +1,130 @@
+form{
+    .form-title{
+        margin: $gutter-half $gutter-half $gutter $gutter-half;
+        font-size: $font-size-h3;
+    }
+
+    .form-control{
+        margin: 0 0 $gutter-half 0;
+        &:last-child{
+            padding-bottom: 0;
+        }
+        .alert{
+            display: inline-block;
+            width: calc(100% - #{$gutter * 2});
+            margin: $gutter-half $gutter 0 $gutter;
+        }
+    }
+
+    .label-wrapper{
+        label, .is-label{
+            padding: 1rem 0;
+        }
+    }
+
+    .element-wrapper{
+        label{
+            font-size: 1.4rem;
+            font-weight: $font-weight-base;
+            user-select: none;
+            margin-bottom: 0.3rem;
+            padding: 0.4rem 0;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &.is-inline{
+                display: inline-block;
+                margin-right: 1rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .message-wrapper,.description-wrapper{
+        color: darken($white,50);
+        font-size: 1.4rem;
+        line-height:1.8rem;
+        padding-top: $gutter-fourth;
+    }
+
+    &.is-compact{
+        .form-control{
+            margin: $gutter-half 0 0 0;
+        }
+    }
+
+    &.is-horizontal{
+        @include media(sm){
+            .label-wrapper{
+                .is-label{
+                    margin-top: 0;
+                }
+            }
+        }
+        @include media(sm-only){
+            .form-control{
+                @include grid-container;
+            }
+
+            .label-wrapper{
+                @include grid-column(4);
+            }
+
+            .element-wrapper,.message-wrapper,.description-wrapper{
+                @include grid-column(8);
+            }
+
+            .message-wrapper,.description-wrapper{
+                @include grid-push(4);
+            }
+        }
+        @include media(md-only){
+            .form-control{
+                @include grid-container;
+            }
+
+            .label-wrapper{
+                @include grid-column(3);
+            }
+
+            .element-wrapper,.message-wrapper,.description-wrapper{
+                @include grid-column(9);
+            }
+
+            .message-wrapper,.description-wrapper{
+                @include grid-push(3);
+            }
+        }
+        @include media(lg){
+            .message-wrapper,.description-wrapper{
+                padding-top: $gutter-half;
+            }
+            .form-control{
+                @include grid-container;
+            }
+
+            .label-wrapper{
+                @include grid-column(2);
+            }
+
+            .element-wrapper,.message-wrapper,.description-wrapper{
+                @include grid-column(9);
+            }
+
+            .message-wrapper,.description-wrapper{
+                @include grid-push(3);
+            }
+        }
+        &.has-inline-description{
+            @include media(lg){
+                .element-wrapper,.description-wrapper{
+                    @include grid-column(5);
+                }
+
+                .message-wrapper,.description-wrapper{
+                    @include grid-column(5);
+                }
+            }
+        }
+    }
+}

@@ -1,23 +1,15 @@
-//-- Functions --//
-@import "neat";
+//-- Helpers --//
+@import "helpers/base";
 
-//-- Functions --//
-//@import "functions/example";
-
-//-- Mixins --//
-@import "mixins/font-smoothing";
-@import "mixins/fontdef";
-@import "mixins/mediaquery";
-@import "mixins/rem";
-
-//-- Base --//
-@import "base/breakpoints";
-@import "base/variables";
-@import "base/elements";
-@import "base/helpers";
+//-- Basic --//
+@import "basic/elements";
+@import "basic/container";
+@import "basic/content";
+@import "basic/classes";
 
 //-- Fonts --//
-@import "fonts/types/museosans";
+//@import "fonts/museosans";
+@import "fonts/fontawesome";
 
 //-- Dev --//
 @import "dev/helpers";
@@ -27,11 +19,22 @@
 
 //-- Layouts --//
 @import "layout/header";
+@import "layout/main";
 @import "layout/sidebar";
 @import "layout/footer";
 
 //-- Components --//
-//@import "components/[component-name]";
+@import "components/basic/alert";
+@import "components/basic/button";
+@import "components/basic/expander";
+@import "components/basic/form";
+@import "components/basic/table";
+
+@import "components/global/menu";
+//@import "components/global/menu-mobile";
+@import "components/global/hero";
+
+//@import "components/theme/[component-name]";
 
 //-- Templates --//
 @import "templates/frontpage";
