@@ -5,7 +5,7 @@
     font-size: 1.4rem;
     &.is-success{
         background-color: lighten($green, 40);
-        color: $green-dark;
+        color: $green;
     }
     &.is-info{
         background-color: lighten($blue, 40);
