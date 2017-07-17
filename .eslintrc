@@ -1,0 +1,17 @@
+{
+    "env": {
+        "es6": true,
+        "browser": true
+    },
+    "extends": "airbnb",
+    "rules": {
+        "no-unused-vars": 0,
+        "no-undef": 0,
+        "no-console": 0,
+        "no-plusplus": 1,
+        "no-param-reassign": [2, { "props": false }],
+        "indent": [1, 4],
+        "max-len": 0,
+        "no-use-before-define": [2, { "functions": false, "classes": false, "variables": false }]
+    }
+}
