@@ -1,75 +1,85 @@
-main{
-
-    .container{
-        > h2{
-            margin-bottom: $spacing;
-        }
-        > .is-content{
-            padding: 0 $gutter;
-        }
+main {
+  .container {
+    > h2 {
+      margin-bottom: $spacing;
     }
 
-    section{
-        .section-header{
-            padding: 0 $gutter;
-        }
-        .title{
-            margin-bottom: $gutter-half;
-            &:only-child{
-                margin-bottom: 0;
-            }
-            &.is-left{
-                text-align: left;
-            }
-        }
-        h1{
-            &.title{
-                font-size: 2.8rem;
-            }
-        }
-        h2{
-            &.title{
-                font-size: 2.8rem;
-            }
-        }
-        .tagline{
-            font-size: 2rem;
-            font-weight: $font-weight-base-strong;
-            margin-bottom: $gutter-fourth;
-        }
-        .description{
-        }
-
-        &.is-hero{
-            .section-header{
-                text-align: left;
-            }
-            .container {
-                padding: $gutter 0;
-            }
-        }
-        &.is-default{
-            .container {
-                padding: ($gutter * 3) 0;
-            }
-            .section-header{
-                text-align: center;
-                & + .section-content{
-                    margin-top: $gutter;
-                }
-            }
-            &:nth-child(even){
-                background: darken($white, 5);
-            }
-        }
-
-        @include media(sm){
-            .section-content{
-                padding: 0 $gutter;
-                .has-grid{
-                    margin: 0 -$gutter;
-                }
-            }
-        }
+    > .is-content {
+      padding: 0 $gutter;
     }
+  }
+
+  section {
+    .section-header {
+      padding: 0 $gutter;
+    }
+
+    .title {
+      margin-bottom: $gutter-half;
+
+      &:only-child {
+        margin-bottom: 0;
+      }
+
+      &.is-left {
+        text-align: left;
+      }
+    }
+
+    h1 {
+      &.title {
+        font-size: 2.8rem;
+      }
+    }
+
+    h2 {
+      &.title {
+        font-size: 2.8rem;
+      }
+    }
+
+    .tagline {
+      font-size: 2rem;
+      font-weight: $font-weight-base-strong;
+      margin-bottom: $gutter-fourth;
+    }
+
+    &.is-hero {
+      .section-header {
+        text-align: left;
+      }
+
+      .container {
+        padding: $gutter 0;
+      }
+    }
+
+    &.is-default {
+      .container {
+        padding: ($gutter * 3) 0;
+      }
+
+      .section-header {
+        text-align: center;
+
+        & + .section-content {
+          margin-top: $gutter;
+        }
+      }
+
+      &:nth-child(even) {
+        background: darken($white, 5);
+      }
+    }
+
+    @include media(sm) {
+      .section-content {
+        padding: 0 $gutter;
+
+        .has-grid {
+          margin: 0 -$gutter;
+        }
+      }
+    }
+  }
 }

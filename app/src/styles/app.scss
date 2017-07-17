@@ -1,5 +1,27 @@
-//-- Helpers --//
-@import "helpers/base";
+//-- Functions --//
+@import "neat";
+
+//-- Functions --//
+//@import "functions/example";
+
+//-- Mixins --//
+@import "mixins/button";
+@import "mixins/clearfix";
+@import "mixins/font-awesome";
+@import "mixins/font-smoothing";
+@import "mixins/fontdef";
+@import "mixins/grid-extra";
+@import "mixins/hide-visual";
+@import "mixins/mediaquery";
+@import "mixins/nth";
+@import "mixins/rem";
+
+//-- Variables --//
+@import "variables/breakpoints";
+@import "variables/project";
+
+//-- Dev --//
+@import "dev/helpers";
 
 //-- Basic --//
 @import "basic/elements";
@@ -7,34 +29,34 @@
 @import "basic/content";
 @import "basic/classes";
 
+//-- Theme --//
+@import "theme/attributes";
+@import "theme/classes";
+@import "theme/elements";
+
 //-- Fonts --//
-//@import "fonts/museosans";
 @import "fonts/fontawesome";
-
-//-- Dev --//
-@import "dev/helpers";
-
-//-- Test --//
-//@import "dev/grid";
 
 //-- Layouts --//
 @import "layout/header";
 @import "layout/main";
-@import "layout/sidebar";
+//@import "layout/sidebar";
 @import "layout/footer";
 
 //-- Components --//
+//-- Global
 @import "components/basic/alert";
 @import "components/basic/button";
 @import "components/basic/expander";
 @import "components/basic/form";
 @import "components/basic/table";
-
-@import "components/global/menu";
-//@import "components/global/menu-mobile";
-@import "components/global/hero";
-
+//-- Theme
 //@import "components/theme/[component-name]";
 
 //-- Templates --//
+//-- Page
+@import "templates/global";
 @import "templates/frontpage";
+//-- Partials
+@import "templates/partials/menu";
+@import "templates/partials/hero";

@@ -27,9 +27,9 @@ $line-height-base: 1.1;
 $line-height: 1.6;
 
 // Colors
-$black: #222222;
-$white: #ffffff;
-$grey: #777777;
+$black: #222;
+$white: #fff;
+$grey: #777;
 $blue: blue;
 $red: red;
 $green: green;
@@ -37,7 +37,6 @@ $orange: orange;
 $purple: purple;
 $pink: pink;
 $yellow: yellow;
-
 
 // Layout
 $base-width: 0.5rem;
@@ -59,41 +58,41 @@ $gutter-double: $gutter * 2;
 
 //bourbon neat
 $neat-grid: (
-    columns: 12,
-    gutter: $gutter,
+  columns: 12,
+  gutter: $gutter,
 );
 
 $neat-grid-no-gutter: (
-    columns: 12,
-    gutter: 0
+  columns: 12,
+  gutter: 0
 );
 
 //media is optional > use own grid system for more flexibility
 $neat-grid-extra-gutter: (
-    columns: 12,
-    gutter: $gutter * 1.5
+  columns: 12,
+  gutter: $gutter * 1.5
 );
 
 $neat-grid-half-gutter: (
-    columns: 12,
-    gutter: $gutter / 2
+  columns: 12,
+  gutter: $gutter / 2
 );
 
 $neat-grid-24: (
-    columns: 24,
-    gutter: $gutter
+  columns: 24,
+  gutter: $gutter
 );
 
 $neat-grid-custom-media-example: (
-    columns: 6,
-    gutter: $gutter-double,
-    media: 28em
+  columns: 6,
+  gutter: $gutter-double,
+  media: 28em
 );
 
 $neat-grid-custom-media-map-get-example: (
-    columns: 6,
-    gutter: $gutter-double,
-    media: map_get($breakpoints, xs)
+  columns: 6,
+  gutter: $gutter-double,
+  media: map_get($breakpoints, xs)
 );
 
 // CSS3

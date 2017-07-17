@@ -1,12 +1,12 @@
-.is-menu{
-    @include clearfix();
-    &.is-horizontal{
+.is-menu {
+    @include clearfix() ;
+    &.is-horizontal {
         li{
             float: left;
         }
     }
-    &.is-inline{
-        li{
+    &.is-inline {
+        li {
             display: inline-block;
         }
     }

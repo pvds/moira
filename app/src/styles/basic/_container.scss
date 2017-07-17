@@ -1,36 +1,42 @@
-.container{
-    @include grid-container();
-    margin: 0 auto;
-    transition: 0.3s;
+.container {
+  @include grid-container();
+
+  margin: 0 auto;
+  transition: 0.3s;
 }
 
-@include media(xxs-max){
-    .container{
-        max-width: #{$bp-xxs-px - $gutter};
-    }
+@include media(xxs-max) {
+  .container {
+    max-width: #{$bp-xxs-px - $gutter};
+  }
 }
-@include media(xs-only){
-    .container{
-        max-width: #{$bp-xs-px - $gutter};
-    }
+
+@include media(xs-only) {
+  .container {
+    max-width: #{$bp-xs-px - $gutter};
+  }
 }
-@include media(sm-only){
-    .container{
-        max-width: #{$bp-sm-px - $gutter};
-    }
+
+@include media(sm-only) {
+  .container {
+    max-width: #{$bp-sm-px - $gutter};
+  }
 }
-@include media(md-only){
-    .container{
-        max-width: #{$bp-md-px - $gutter};
-    }
+
+@include media(md-only) {
+  .container {
+    max-width: #{$bp-md-px - $gutter};
+  }
 }
-@include media(lg-only){
-    .container{
-        max-width: #{$bp-lg-px - $gutter};
-    }
+
+@include media(lg-only) {
+  .container {
+    max-width: #{$bp-lg-px - $gutter};
+  }
 }
+
 @include media(xl) {
-    .container {
-        max-width: #{$bp-xl-px - $gutter};
-    }
+  .container {
+    max-width: #{$bp-xl-px - $gutter};
+  }
 }

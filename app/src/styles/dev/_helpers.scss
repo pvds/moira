@@ -1,60 +1,66 @@
-body{
-    &.is-development{
-        &:after{
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            background: $black;
-            color: $white;
-            padding: 0.5rem 1rem;
-            font-size: 1.3rem;
-            font-family: $font-base;
-            border-radius: $border-radius 0 0 0;
-            z-index: 10000;
-            content: "XXS - #{$bp-xxs}em(#{$bp-xxs-px}px)";
-            @include media(xs-only){
-                content: "XS - #{$bp-xs}em(#{$bp-xs-px}px)";
-            }
-            @include media(sm){
-                content: "SM - #{$bp-sm}em(#{$bp-sm-px}px)";
-            }
-            @include media(md){
-                content: "MD - #{$bp-md}em(#{$bp-md-px}px)";
-            }
-            @include media(lg){
-                content: "LG - #{$bp-lg}em(#{$bp-lg-px}px)";
-            }
-            @include media(xl){
-                content: "XL - #{$bp-xl}em(#{$bp-xl-px}px)";
-            }
-        }
+body {
+  &.is-development {
+    &:after {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      background: $black;
+      color: $white;
+      padding: 0.5rem 1rem;
+      font-size: 1.3rem;
+      font-family: $font-base;
+      border-radius: $border-radius 0 0 0;
+      z-index: 10000;
+      content: "XXS - #{$bp-xxs}em(#{$bp-xxs-px}px)";
+
+      @include media(xs-only) {
+        content: "XS - #{$bp-xs}em(#{$bp-xs-px}px)";
+      }
+
+      @include media(sm) {
+        content: "SM - #{$bp-sm}em(#{$bp-sm-px}px)";
+      }
+
+      @include media(md) {
+        content: "MD - #{$bp-md}em(#{$bp-md-px}px)";
+      }
+
+      @include media(lg) {
+        content: "LG - #{$bp-lg}em(#{$bp-lg-px}px)";
+      }
+
+      @include media(xl) {
+        content: "XL - #{$bp-xl}em(#{$bp-xl-px}px)";
+      }
     }
+  }
 }
 
-header{
-    section{
-        &.top{
-            background: darken($white, 70);
-            color: darken($white, 20);
-            text-align: right;
+header {
+  section {
+    &.top {
+      background: darken($white, 70);
+      color: darken($white, 20);
+      text-align: right;
 
-            li{
-                > *{
-                    padding: $gutter-fourth $gutter-half;
-                    margin: 2px 0 4px 0;
-                    display: inline-block;
-                }
-            }
+      li {
+        > * {
+          padding: $gutter-fourth $gutter-half;
+          margin: 2px 0 4px;
+          display: inline-block;
+        }
+      }
 
-            a{
-                &:hover{
-                    color: $white;
-                }
-            }
+      a {
+        &:hover {
+          color: $white;
         }
-        #menu-dev{
-            font-size: 1.2rem;
-            margin: 0 $gutter;
-        }
+      }
     }
+
+    #menu-dev {
+      font-size: 1.2rem;
+      margin: 0 $gutter;
+    }
+  }
 }
